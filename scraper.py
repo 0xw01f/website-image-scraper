@@ -10,6 +10,10 @@ for img in soup.find_all("img"):
     img_url = URL + img.attrs.get("src")
     img_urls.append(img_url)
 
+
+if not os.path.exists('images'):
+    os.makedirs('images')
+
 for url in img_urls:
     response = requests.get(url)
     size = int(response.headers.get("Content-Length", 0))
