@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 import requests
 import os
 
-URL = "https://cyberocc.com/"
+URL = "https://yourwebsite.com/"
 
 soup = bs(requests.get(URL).content, "html.parser")
 img_urls = []
